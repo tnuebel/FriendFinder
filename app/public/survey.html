@@ -44,10 +44,10 @@
     <hr>
 
     <h3>Question 1</h3>
-    <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+    <h4>You'd rather sleep in than wake up early.</h4>
     <form method="optionSelect">
-      <select name="survey question">
-        <option value="double chocolate">Select an Option</option>
+      <select name="surveyQuestion">
+        <option value="option">Select an Option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -59,9 +59,9 @@
     <br>
 
     <h3>Question 2</h3>
-    <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
-    <select name="survey question">
-      <option value="double chocolate">Select an Option</option>
+    <h4>Coors Light > IPA.</h4>
+    <select name="surveyQuestion">
+      <option value="option">Select an Option</option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -71,9 +71,9 @@
     <br>
 
     <h3>Question 3</h3>
-    <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
-    <select name="survey question">
-      <option value="double chocolate">Select an Option</option>
+    <h4>You're a procrastinator, performing your best while under pressure.</h4>
+    <select name="surveyQuestion">
+      <option value="option">Select an Option</option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -83,9 +83,9 @@
     <br>
 
     <h3>Question 4</h3>
-    <h4>You rarely do something just out of sheer curiosity.</h4>
-    <select name="survey question">
-      <option value="double chocolate">Select an Option</option>
+    <h4>You like to go with the flow while on vacation, rather than plan everything out.</h4>
+    <select name="surveyQuestion">
+      <option value="option">Select an Option</option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -95,9 +95,9 @@
     <br>
 
     <h3>Question 5</h3>
-    <h4>People can rarely upset you.</h4>
-    <select name="survey question">
-      <option value="double chocolate">Select an Option</option>
+    <h4>You prefer death-metal over classical music.</h4>
+    <select name="surveyQuestion">
+      <option value="option">Select an Option</option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -105,11 +105,10 @@
       <option value="5">5 (Strongly Agree)</option>
     </select>
     <br>
-
     <h3>Question 6</h3>
-    <h4>It is often difficult for you to relate to other people's feelings.</h4>
-    <select name="survey question">
-      <option value="double chocolate">Select an Option</option>
+    <h4>You prefer a weekend in nature rather than dinner and dancing.</h4>
+    <select name="surveyQuestion">
+      <option value="option">Select an Option</option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -119,9 +118,9 @@
     <br>
 
     <h3>Question 7</h3>
-    <h4>In a discussion, truth should be more important than people's sensitivities.</h4>
-    <select name="survey question">
-      <option value="double chocolate">Select an Option</option>
+    <h4>You'd prefer a California burrito over caviar and foies gras.</h4>
+    <select name="surveyQuestion">
+      <option value="option">Select an Option</option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -131,9 +130,9 @@
     <br>
 
     <h3>Question 8</h3>
-    <h4>You rarely get carried away by fantasies and ideas.</h4>
-    <select name="survey question">
-      <option value="double chocolate">Select an Option</option>
+    <h4>Skiing > snowboarding.</h4>
+    <select name="surveyQuestion">
+      <option value="option">Select an Option</option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -143,9 +142,9 @@
     <br>
 
     <h3>Question 9</h3>
-    <h4>You think that everyone's views should be respected regardless of whether they are supported by facts or not.</h4>
-    <select name="survey question">
-      <option value="double chocolate">Select an Option</option>
+    <h4>You wear your crocs with wool socks.</h4>
+    <select name="surveyQuestion">
+      <option value="option">Select an Option</option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -155,9 +154,9 @@
     <br>
 
     <h3>Question 10</h3>
-    <h4>You feel more energetic after spending time with a group of people.</h4>
-    <select name="survey question">
-      <option value="double chocolate">Select an Option</option>
+    <h4>You hate kittens.</h4>
+    <select name="surveyQuestion">
+      <option value="option">Select an Option</option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -184,9 +183,45 @@
 
 
 
-<script>
+		<!-- // Activate submit button
+		$('#submitButton').on('click', function(event) {
+			event.preventDefault();
+
+
   // TODO: Get the from data and POST it to the API
+  // goal was to get the FROM data and then post it to the api, 
+  // unable to make it work.
+
+  var userInput = {
+    name: $(‘#userName).val().trim(),
+    scores: [
+        $(‘#question1’).val().trim(),
+        $(‘#question2’).val().trim(),
+        $(‘#question3’).val().trim(),
+        $(‘#question4’).val().trim(),
+        $(‘#question5’).val().trim(),
+        $(‘#question6’).val().trim(),
+        $(‘#question7’).val().trim(),
+        $(‘#question8’).val().trim(),
+        $(‘#question9’).val().trim(),
+        $(‘#question10’).val().trim()
+    ]
+};
+console.log(‘userInput = ’ + JSON.stringify(userInput));
+
+// goal was to do a POST request...
+$.post(‘/api/friends’, userInput).done(function (data) {
+
+    $(‘#userMatch’).html(data.matchName);
+    $(“#userMatchImage”).attr(“src”, data.matchImage);
+
+    $(‘#modal1’).modal(‘open’);
+});
+}); -->
+
+
 </script>
 </body>
 
 </html>
+

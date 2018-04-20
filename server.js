@@ -66,8 +66,27 @@ app.post("/api/new", function(req, res){
         "message": "Added new friend",
         "dataSent": data
     });
-    // push it to the friends array 
+
+
+    // the goal was to get the info gathered from the survey...
+    // then puch that info into the friend's array,
+    // wasn't able to get it to work.
+
+    for (var i = 0; i < friends.length; i += 1) {
+        // Get the new match.
+        var newMatch = friends[i];
+        {
+          // push it into our friends array.
+          friends.push(newMatch);
+        }
+      }
+
+
+
     // respond back with a messsage like "Added friend!";
+    // unable to get the prompt to engage.
+
+    var newFriend = window.prompt("New friend added!");
 });
 
 
