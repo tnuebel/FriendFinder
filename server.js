@@ -72,12 +72,12 @@ app.post("/api/new", function(req, res){
     // then puch that info into the friend's array,
     // wasn't able to get it to work.
 
-    for (var i = 0; i < friends.length; i += 1) {
+    for (var i = 0; i < friendsArray.length; i += 1) {
         // Get the new match.
-        var newMatch = friends[i];
+        var newMatch = friendsArray[i];
         {
           // push it into our friends array.
-          friends.push(newMatch);
+          friendsArray.push(newMatch);
         }
       }
 
